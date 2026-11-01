@@ -9,8 +9,8 @@
 | 길 A - 로컬 SQLite 저장 | ✅ 서버를 껐다 켜도 할 일·태스크가 그대로 남음 (2026-10-30) |
 | 길 B - 클라우드 전환 | ✅ 코드 전환 완료: 저장소 SQLite → Supabase, 로그인 추가 (커밋 B-1~B-4) |
 | 길 B - RLS 정책 | ✅ 메모리 Postgres에서 두 사용자로 검증 ([testing.md](testing.md#supabase-스키마rls-테스트-기록-길-b)) |
-| 길 B - Supabase 실제 저장 | ✅ Render 운영 서버에서 추가 → 새로고침 후에도 유지 (2026-10-31). Table Editor 확인과 서버 재시작 후 확인은 ⏳ |
-| 길 B - 실제 계정 두 개 RLS | ✅ `npm run check:rls` **19/19 통과** (2026-10-31, 계정 `aaa@`·`bbb@email.com`) |
+| 길 B - Supabase 실제 저장 | ✅ Render 운영 서버에서 추가 → 새로고침 후에도 유지 (2026-10-31). Table Editor의 `user_id`, 서버 재시작 후 유지도 확인 (eple, 2026-11-01) |
+| 길 B - 실제 계정 두 개 RLS | ✅ `npm run check:rls` **19/19 통과** (2026-10-31, 테스트 계정 두 개) |
 | 길 C - Render 배포 | ✅ https://todo-0vru.onrender.com/ (Supabase 모드, [render.yaml](../render.yaml)) |
 
 ## 길 B - Supabase
@@ -26,8 +26,8 @@
 
 ### 1. 저장 확인
 - [x] 할 일 추가 → 새로고침해도 그대로 (Render 운영 서버, 로그인 상태, 2026-10-31). 화면 → 서버 → Supabase에 저장된 값을 다시 읽어 온 것
-- [ ] Table Editor의 `todos`에 행이 있고 `user_id`가 채워졌는지 (대시보드에서 직접 확인 필요)
-- [ ] 서버 재시작 후에도 그대로 (Render 재배포 전후 비교는 아직 하지 않음)
+- [x] Table Editor의 `todos`에 행이 있고 `user_id`가 채워짐 (eple 확인, 2026-11-01)
+- [x] 서버 재시작 후에도 그대로. 무료 Render 서버가 쓰지 않는 동안 꺼졌다가 다시 켜진 뒤에도 할 일이 남아 있었다. 데이터는 서버와 별도 서비스인 Supabase에 저장되기 때문 (eple 확인, 2026-11-01)
 
 ### 2. RLS 확인
 - [x] `npm run check:rls` **19/19 통과** (2026-10-31, 로컬 서버 + 실제 Supabase 프로젝트)
