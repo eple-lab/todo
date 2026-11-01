@@ -28,10 +28,10 @@ GitHub Pages 데모(https://eple-lab.github.io/todo/)는 셋과 별개인 화면
 - [x] **B-3** 로그인·회원가입 화면
 - [x] **B-4** RLS 확인 스크립트 (`npm run check:rls`)
 - [x] **B-5** 문서를 Supabase 기준으로 갱신, 연결 가이드
-- [ ] **B-6** 실제 Supabase 프로젝트 연결 → 저장 확인 → 계정 두 개 RLS 확인 → 캡처 ([verification.md](verification.md))
+- [x] **B-6** 실제 Supabase 프로젝트 연결 → 저장 확인 → 계정 두 개 RLS 확인 → 캡처 ([verification.md](verification.md)). RLS 19/19
 
 ### 길 C (선택)
-- [ ] Render 배포 ([deployment.md](deployment.md)의 준비물 노트)
+- [x] Render 배포 ([deployment.md](deployment.md)의 준비물 노트). https://todo-0vru.onrender.com/
 
 커밋 하나하나는 `git log --oneline` 또는 GitHub의 Commits 화면에서 볼 수 있다.
 

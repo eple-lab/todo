@@ -28,7 +28,7 @@
 - [ ] Supabase **Table Editor → todos**에 행이 쌓이고 `user_id`가 채워짐 ← 캡처
 - [ ] 새로고침 → 그대로 / 서버 `Ctrl + C` 후 다시 `npm start` → 그대로 ← 캡처
 - [ ] 로그아웃 → 계정 B 회원가입 → **A의 할 일이 안 보임** ← 캡처
-- [ ] `.env`에 두 계정을 적고 `npm run check:rls` → `15/15 통과` ← 캡처
+- [ ] `.env`에 두 계정을 적고 `npm run check:rls` → `19/19 통과` ← 캡처
 - [ ] 계정 A로 다시 로그인 → 할 일이 그대로
 
 ## 과제 확인 체크리스트 (길 A - SQLite, `path-a` 태그)

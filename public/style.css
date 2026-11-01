@@ -44,6 +44,7 @@ input[type="text"], input[type="search"], input[type="date"] {
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--surface);
+  color: var(--text);   /* 2026-11-01 BUG-004: 머리 영역의 흰 글자색을 물려받지 않도록 */
   padding: 7px 10px;
 }
 

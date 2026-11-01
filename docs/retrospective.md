@@ -131,8 +131,8 @@ SELECT title FROM tasks WHERE todo_id = 3 AND completed = false;
 | | 추가 | 새로고침 후 | 서버 재시작 후 | 기록 |
 |---|---|---|---|---|
 | 로컬 SQLite | ✅ 할 일 4개, 태스크 8개 | ✅ | ✅ 같은 데이터 그대로, DB 파일에도 4행·8행 | 캡처 3장 (2026-10-30), `feature/path-b-supabase` 브랜치의 `docs/verification.md` |
-| Supabase | ⏳ | ⏳ | ⏳ | 실제 프로젝트 연결 후 |
-| RLS (계정 B에서 A의 할 일) | | | | ⏳ 메모리 Postgres에서는 통과, 실제 프로젝트에서 `npm run check:rls` 예정 |
+| Supabase | ✅ Render 운영 서버에서 추가 | ✅ | ✅ 무료 서버가 쉬었다가 다시 켜진 뒤에도 그대로 (Supabase는 별도 서비스) | Table Editor에서 `todos` 행과 `user_id` 확인 (2026-11-01, eple) |
+| RLS (계정 B에서 A의 할 일) | | | | ✅ 실제 프로젝트에서 `npm run check:rls` 19/19 (2026-10-31), 화면에서도 A·B가 각자 자기 할 일만 보임 (2026-11-01) |
 
 ## 배운 것 / 어려웠던 것 / 다음에
 
